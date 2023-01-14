@@ -51,6 +51,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     await prisma.data.updateMany({
         data: {
             count: count + 1
+        },
+        where: {
+            count: {
+                not: -1
+            }
         }
     })
 
