@@ -33,7 +33,7 @@ const Home: NextPage = () => {
 
       setQuota(quota);
     })().catch((e) => console.log(e));
-  }, []);
+  }, [update]);
 
   return (
     <>
