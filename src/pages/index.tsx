@@ -87,7 +87,13 @@ const Home: NextPage = () => {
 					</p>
 
 					<input
-						className="mt-8 w-[60vw] rounded border-none bg-slate-900 px-6 py-4 text-lg text-white outline-none transition-all  focus:bg-slate-800"
+						className={
+							"mt-8 w-[60vw] rounded border-none bg-slate-900 px-6 py-4 text-lg text-white outline-none transition-all  focus:bg-slate-800" +
+							" " +
+							loading
+								? "opacity-90"
+								: ""
+						}
 						placeholder="Enter a mood & press enter"
 						value={mood}
 						onChange={(e) => {
@@ -116,7 +122,7 @@ const Home: NextPage = () => {
 										setCss(data.code);
 										setTimeout(() => {
 											setLoading(false);
-										}, 5000);
+										}, 6000);
 										setUpdate(update + 1);
 									})
 									.catch((e) => alert(e));

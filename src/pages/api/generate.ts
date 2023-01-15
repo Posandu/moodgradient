@@ -30,7 +30,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         return;
     }
 
-    if (query.length > 200) {
+    if (query?.length > 200) {
         res.status(400).json({ code: "", error: "Whoa that's a large mood. Make it short" });
         return;
     }
