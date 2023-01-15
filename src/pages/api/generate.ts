@@ -30,6 +30,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         return;
     }
 
+    if (query.length > 200) {
+        res.status(400).json({ code: "", error: "Whoa that's a large mood. Make it short" });
+        return;
+    }
+
     // Generate the code
     const response = await openai.createCompletion({
         model: "text-davinci-003",
