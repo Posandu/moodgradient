@@ -54,7 +54,7 @@ const Home: NextPage = () => {
 						<div
 							className="my-2 text-center flex justify-center"
 							dangerouslySetInnerHTML={{
-								__html: `<a href="https://www.producthunt.com/posts/gradienmood?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gradienmood" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=375020&theme=dark&__=${Math.random(0)}" alt="GradienMood - Generate&#0032;gradients&#0032;with&#0032;your&#0032;mood&#0032; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>`,
+								__html: `<a href="https://www.producthunt.com/posts/gradienmood?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gradienmood" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=375020&theme=dark&__=${Math.random()}" alt="GradienMood - Generate&#0032;gradients&#0032;with&#0032;your&#0032;mood&#0032; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>`,
 							}}
 						></div>
 						<h1
