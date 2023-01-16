@@ -19,7 +19,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     const q = await prisma.data.findFirst();
     const count = q?.count || 0;
 
-    if (count >= 1000) {
+    if (count >= 3669) {
         res.status(400).json({ code: "", error: "Global Quota Exceeded. Please consider donating to the project to increase the quota or try again later." });
         return;
     }

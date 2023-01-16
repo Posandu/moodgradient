@@ -46,10 +46,10 @@ const Home: NextPage = () => {
 			<div className="min-h-screen bg-gradient-to-tr from-black to-gray-900 pt-20">
 				<div className="flex min-h-[calc(100vh-4rem)] flex-col items-center">
 					<div
-						className={
-							(focused ? "pointer-events-none -mt-48 opacity-75" : "") +
-							" transition-all"
+						className={`${
+							focused ? "pointer-events-none -mt-48 opacity-75" : ""
 						}
+							 transition-all`}
 					>
 						<div
 							className="my-2 text-center flex justify-center"
@@ -82,18 +82,14 @@ const Home: NextPage = () => {
 					<p className="mt-2 text-center text-gray-400">
 						Generate a gradient from a mood /{" "}
 						<span className="bg-black text-gray-300">
-							Global Quota: {1000 - quota} left
+							Global Quota: {3669 - quota} left
 						</span>
 					</p>
 
 					<input
-						className={
-							`mt-8 w-[60vw] rounded border-none bg-slate-900 px-6 py-4 text-lg text-white outline-none transition-all  focus:bg-slate-800 ${
-							
-							loading
-								? "opacity-90"
-								: ""}`
-						}
+						className={`mt-8 w-[60vw] rounded border-none bg-slate-900 px-6 py-4 text-lg text-white outline-none transition-all  focus:bg-slate-800 ${
+							loading ? "opacity-90" : ""
+						}`}
 						placeholder="Enter a mood & press enter"
 						value={mood}
 						onChange={(e) => {
@@ -132,8 +128,8 @@ const Home: NextPage = () => {
 
 					<div
 						className={
-							(loading ? "pointer-events-none opacity-75" : "") +
-							" transition-all"
+							`${loading ? "pointer-events-none opacity-75" : ""} 
+							 transition-all`
 						}
 					>
 						<Gradient prompt={mood} code={css} />
@@ -174,8 +170,8 @@ const Home: NextPage = () => {
 
 					<div
 						className={
-							"mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4" +
-							(loading ? " pointer-events-none opacity-75" : "")
+							`mt-8 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 
+							${loading ? " pointer-events-none opacity-75" : ""}`
 						}
 					>
 						{generations.map((generation) => (
