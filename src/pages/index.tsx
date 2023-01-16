@@ -88,11 +88,11 @@ const Home: NextPage = () => {
 
 					<input
 						className={
-							"mt-8 w-[60vw] rounded border-none bg-slate-900 px-6 py-4 text-lg text-white outline-none transition-all  focus:bg-slate-800" +
-							" " +
+							`mt-8 w-[60vw] rounded border-none bg-slate-900 px-6 py-4 text-lg text-white outline-none transition-all  focus:bg-slate-800 ${
+							
 							loading
 								? "opacity-90"
-								: ""
+								: ""}`
 						}
 						placeholder="Enter a mood & press enter"
 						value={mood}
